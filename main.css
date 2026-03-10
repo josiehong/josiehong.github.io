@@ -16,6 +16,7 @@ h1, h2, h3, h4 {
 a {
     text-decoration: none;
     color: #3560a5;
+    transition: color 0.15s, background-color 0.15s;
 }
 a:hover {
     color: white;
@@ -41,6 +42,10 @@ highlight {
     line-height: 1.6; /* Adjust line height */
 }
 
+#content p {
+    font-size: 10pt;
+}
+
 /* Media query for smaller screens (e.g., phones) */
 @media (max-width: 900px) {
     html {
@@ -52,8 +57,46 @@ highlight {
     }
 }
 
+/* hero layout */
+.hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 1em;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    margin-top: 0;
+}
+
+.hero-text p {
+    font-size: 9.5pt;
+}
+
 .avatar {
-    width: 128px;
+    width: 150px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .avatar {
+        width: 120px;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
 }
 
 .icons {
@@ -61,15 +104,14 @@ highlight {
     font-size: x-large;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    width: 80%;
-    max-width: 320px;
-    margin: 1em 0; /* Adjust margins as needed */
+    justify-content: flex-start;
+    gap: 16px;
+    margin: 1em 0;
 }
 
 .icons li {
-    display: inline;
-    width: 42px;
+    display: flex;
+    align-items: center;
 }
 
 .icons a {
@@ -85,10 +127,127 @@ highlight {
     margin: 6pt 0;
 }
 
-footer {
-    margin-top: 3em;
+hr {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin: 1em 0;
 }
 
+footer {
+    margin-top: 3em;
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+    color: #888;
+}
+
+/* Talks list */
+.talk-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.talk-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.talk-item:last-child {
+    border-bottom: none;
+}
+
+.talk-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.talk-type {
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+.talk-type--oral {
+    background-color: #e8eef8;
+    color: #3560a5;
+}
+
+.talk-type--poster {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.talk-date {
+    font-size: 9.5pt;
+    color: #888;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.talk-title {
+    font-size: 10pt;
+    margin-bottom: 3px;
+}
+
+.talk-meta {
+    font-size: 9.5pt;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.talk-link {
+    font-size: 9pt;
+    color: #3560a5;
+    border: 1px solid #b0c4e8;
+    border-radius: 3px;
+    padding: 1px 6px;
+}
+
+.talk-link:hover {
+    background-color: #6490d7;
+    border-color: #6490d7;
+    color: white;
+}
+
+/* News list */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    display: flex;
+    gap: 16px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.5;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 9.5pt;
+    color: #888;
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 78px;
+}
+
+.news-content {
+    flex: 1;
+    font-size: 10pt;
+}
 
 /* navbar */
 nav {
@@ -96,6 +255,8 @@ nav {
     max-width: 900px;
     margin: 0 auto 12px auto;
     width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -132,9 +293,9 @@ nav {
 /* active navbar item */
 .navbar a.active {
     font-weight: 700;
-    text-decoration: underline;
-    background-color: #6490d7;
-    color: white;
+    color: #3560a5;
+    border-bottom: 3px solid #6490d7;
+    background: none;
 }
 
 /* Hamburger button - hidden by default */
@@ -177,6 +338,7 @@ nav {
 @media (max-width: 600px) {
     nav {
         margin-bottom: 0;
+        padding: 0;
     }
 
     .hamburger {
@@ -220,39 +382,42 @@ nav {
 }
 
 
-/* table  */
-.table-container {
-    width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-  }
-  
+/* table */
 table {
-width: 100%; /* Use 100% width of its container */
-max-width: 800px; /* Limit the maximum width */
-border-collapse: collapse;
-margin: 10px 0;
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 10pt;
 }
 
 th, td {
-border: 1px solid #000;
-padding: 4px;
-text-align: left;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th:first-child, td:first-child {
+    padding-left: 0;
 }
 
 th {
-background-color: #f2f2f2;
+    font-weight: 600;
+    color: black;
+    background: none;
 }
 
-tbody tr:nth-child(even) {
-background-color: #f9f9f9;
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f5f8ff;
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
-.table-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-}
-
 table {
     width: 100%; /* Ensure the table takes the full width of its container */
     border-collapse: collapse;
@@ -283,18 +448,34 @@ td::before {
 }
 
 h3, h4 {
-    margin-top: 6pt; /* Adjust the top margin */
-    margin-bottom: 0px; /* Adjust the bottom margin */
+    margin-top: 24px;
+    margin-bottom: 0px;
 }
+
 
 /* Publication cards */
 .paper-card {
+    background: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.paper-card--image {
     display: flex;
     align-items: flex-start;
-    background: #fff; 
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
+
+h2 + .paper-card,
+h3 + .paper-card,
+p + .paper-card {
+    border-top: none;
+}
+
+h3 + p {
+    margin-top: 4px;
+}
+
 .toc {
     flex-shrink: 0;
     margin-right: 15px;
@@ -304,36 +485,219 @@ h3, h4 {
     height: 200px;
     object-fit: contain;
     background-color: white;
-    padding: 0px; /* Remove padding */
-    display: block; /* Ensures no inline spacing issues */
+    padding: 0px;
+    display: block;
+}
+
+.toc--book img {
+    width: 110px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
 }
 .content {
     flex-grow: 1;
     padding: 5px;
 }
-.title {
-    font-size: 11pt;
-    margin-bottom: 2pt;
-}
-.tldr {
+
+/* Text-only paper card elements */
+.paper-title {
     font-size: 10pt;
+    font-weight: 600;
+    margin: 0 0 3px 0;
+    line-height: 1.4;
+}
+
+.paper-authors {
+    font-size: 9.5pt;
+    color: #444;
+    margin: 0 0 2px 0;
+}
+
+.paper-venue {
+    font-size: 9.5pt;
+    color: #555;
+    margin: 0 0 6px 0;
+}
+
+.paper-venue i {
+    color: #3560a5;
     font-style: italic;
-    color: #333;
+}
+
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.paper-link {
+    font-size: 9pt;
+    color: #3560a5;
+    border: 1px solid #b0c4e8;
+    border-radius: 3px;
+    padding: 1px 6px;
+}
+
+.paper-link:hover {
+    background-color: #6490d7;
+    border-color: #6490d7;
+    color: white;
+}
+
+.tldr {
+    font-size: 9pt;
+    color: #555;
+    margin: 0;
 }
 
 /* Responsive adjustments for narrow screens */
 @media (max-width: 900px) {
-    .paper-card {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center-align content */
+    .paper-card--image {
+        flex-direction: column;
+        align-items: center;
     }
 
     .toc {
         margin-right: 0;
-        margin-bottom: 10px; /* Add spacing between image and content */
+        margin-bottom: 10px;
     }
 
     .content {
-        text-align: justify; /* Center-align text if desired */
+        text-align: justify;
     }
+}
+
+/* Timeline layout */
+.timeline-group {
+    display: flex;
+    gap: 0 24px;
+    margin-bottom: 4px;
+}
+
+.timeline-year {
+    width: 58px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #3560a5;
+    font-size: 10.5pt;
+    padding-top: 12px;
+    text-align: right;
+}
+
+.timeline-papers {
+    flex: 1;
+    border-left: 2px solid #e8e8e8;
+    padding-left: 20px;
+}
+
+.timeline-papers .paper-card:first-child {
+    border-top: none;
+}
+
+/* Paper topic tags */
+.paper-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.paper-tag {
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.paper-tag--sm-ms {
+    background-color: #e8eef8;
+    color: #3560a5;
+}
+
+.paper-tag--prot-ms {
+    background-color: #e6f4ef;
+    color: #2a7a55;
+}
+
+.paper-tag--reliable-ml {
+    background-color: #fdf3e7;
+    color: #b86e00;
+}
+
+.tag-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+
+.tag-legend-label {
+    font-size: 9pt;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    .timeline-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .timeline-year {
+        width: auto;
+        text-align: left;
+        padding-top: 12px;
+        padding-bottom: 2px;
+        padding-left: 12px;
+        border-left: 2px solid #e8e8e8;
+    }
+
+    .timeline-papers {
+        padding-left: 12px;
+    }
+}
+
+/* Professional service list */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    max-width: 800px;
+}
+
+.service-item {
+    display: flex;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.5;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-label {
+    font-size: 10pt;
+    font-weight: 600;
+    color: black;
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.service-content {
+    flex: 1;
+    font-size: 10pt;
+}
+
+.service-note {
+    font-size: 9pt;
+    color: #888;
+    font-style: italic;
+    margin-top: 4px;
 }
