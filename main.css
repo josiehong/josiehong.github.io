@@ -13,6 +13,14 @@ h1, h2, h3, h4 {
     font-weight: 500;
 }
 
+h2 {
+    font-size: 16pt;
+}
+
+h3 {
+    font-size: 13pt;
+}
+
 a {
     text-decoration: none;
     color: #3560a5;
@@ -35,11 +43,15 @@ highlight {
     position: relative; /* Change to relative for responsive positioning */
     width: 100%; /* Ensure it spans the full width of its container */
     max-width: 900px; /* Limit maximum width for larger screens */
-    padding: 12px; /* Reduce padding for smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
     box-sizing: border-box; /* Include padding in width calculation */
     margin: 0 auto; /* Center align horizontally */
     text-align: justify; /* Left and right align text content */
     line-height: 1.6; /* Adjust line height */
+}
+
+#content > *:first-child {
+    margin-top: 0;
 }
 
 #content p {
@@ -52,7 +64,7 @@ highlight {
         font-size: 11pt; /* Adjust font size for readability */
     }
     #content {
-        padding: 12px; /* Further reduce padding for smaller screens */
+        padding: 20px; /* Further reduce padding for smaller screens */
         max-width: 100%; /* Ensure content spans full width */
     }
 }
@@ -125,6 +137,67 @@ highlight {
 .sublist {
     text-align: left;
     margin: 6pt 0;
+    font-size: 10pt;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.blog-item:last-child {
+    border-bottom: none;
+}
+
+.blog-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.blog-tag {
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.blog-date {
+    font-size: 9.5pt;
+    color: #888;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.blog-title {
+    font-size: 10pt;
+}
+
+.blog-title a {
+    color: black;
+}
+
+.blog-title a:hover {
+    color: white;
+    background-color: #6490d7;
+}
+
+.blog-tag--study-notes {
+    background-color: #e8eef8;
+    color: #3560a5;
+}
+
+.blog-tag--wild-thoughts {
+    background-color: #e8f4ee;
+    color: #2a7a5a;
 }
 
 hr {
@@ -203,7 +276,7 @@ footer {
 }
 
 .talk-link {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #3560a5;
     border: 1px solid #b0c4e8;
     border-radius: 3px;
@@ -253,9 +326,9 @@ footer {
 nav {
     position: relative;
     max-width: 900px;
-    margin: 0 auto 12px auto;
+    margin: 0 auto 24px auto;
     width: 100%;
-    padding: 0 12px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -280,7 +353,7 @@ nav {
 .navbar a {
     color: black;
     text-decoration: none;
-    padding: 14px 26px;
+    padding: 14px 20px;
     display: block;
     text-align: left;
 }
@@ -502,7 +575,7 @@ h3 + p {
 
 /* Text-only paper card elements */
 .paper-title {
-    font-size: 10pt;
+    font-size: 11pt;
     font-weight: 600;
     margin: 0 0 3px 0;
     line-height: 1.4;
@@ -533,7 +606,7 @@ h3 + p {
 }
 
 .paper-link {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #3560a5;
     border: 1px solid #b0c4e8;
     border-radius: 3px;
@@ -547,7 +620,7 @@ h3 + p {
 }
 
 .tldr {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #555;
     margin: 0;
 }
@@ -605,23 +678,27 @@ h3 + p {
 }
 
 .paper-tag {
-    font-size: 7.5pt;
+    font-size: 8.5pt;
     font-weight: 600;
     padding: 1px 7px;
     border-radius: 3px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
     white-space: nowrap;
 }
 
-.paper-tag--sm-ms {
+.paper-tag--ml-ms {
     background-color: #e8eef8;
     color: #3560a5;
 }
 
-.paper-tag--prot-ms {
-    background-color: #e6f4ef;
-    color: #2a7a55;
+.paper-tag--survey {
+    background-color: #f0eaf8;
+    color: #6b3fa0;
+}
+
+.paper-tag--patent {
+    background-color: #f0eaf8;
+    color: #6b3fa0;
 }
 
 .paper-tag--reliable-ml {
@@ -638,7 +715,7 @@ h3 + p {
 }
 
 .tag-legend-label {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #888;
 }
 
@@ -696,7 +773,7 @@ h3 + p {
 }
 
 .service-note {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #888;
     font-style: italic;
     margin-top: 4px;

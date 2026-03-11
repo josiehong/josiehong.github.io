@@ -2,7 +2,7 @@
 .language-toggle {
     display: inline-block;
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: 10pt;
     cursor: pointer;
     background-color: white;
     margin-bottom: 12px;
@@ -50,7 +50,7 @@ img {
 figcaption {
     color: gray; /* Set text color to gray */
     font-style: italic; /* Optional: Make the text italic */
-    font-size: 0.9em; /* Optional: Adjust font size */
+    font-size: 9.5pt; /* Optional: Adjust font size */
     margin-top: 0.5em; /* Optional: Add space above the caption */
 }
 
