@@ -242,8 +242,9 @@
 
 
         <footer>
-            <p>&copy; 2024 Yuhui Hong. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Yuhui Hong. All rights reserved.</p>
         </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </section>
 
 </body>

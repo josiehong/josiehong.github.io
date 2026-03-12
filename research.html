@@ -226,8 +226,9 @@
         </div>
 
         <footer>
-          <p>&copy; 2025 Yuhui Hong. All rights reserved.</p>
+          <p>&copy; <span id="year"></span> Yuhui Hong. All rights reserved.</p>
         </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </section>
     <script src="menu.js"></script>
 </body>

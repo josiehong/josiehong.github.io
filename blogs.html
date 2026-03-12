@@ -63,6 +63,13 @@
             <li class="blog-item">
                 <div class="blog-header">
                     <span class="blog-tag blog-tag--study-notes">Study Notes</span>
+                    <span class="blog-date">Mar. 10, 2026</span>
+                </div>
+                <div class="blog-title"><a href="blogs/20260310.html">Cheat sheet of proteomics: from sample prep to mass spectrometry</a></div>
+            </li>
+            <li class="blog-item">
+                <div class="blog-header">
+                    <span class="blog-tag blog-tag--study-notes">Study Notes</span>
                     <span class="blog-date">Mar. 23, 2025</span>
                 </div>
                 <div class="blog-title"><a href="blogs/20250323.html">From IUPAC name to 3D: calculating glycan structures with the GAFF force field</a></div>
@@ -91,8 +98,9 @@
         </ul>
     
     <footer>
-        <p>&copy; 2025 Yuhui Hong. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Yuhui Hong. All rights reserved.</p>
     </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
     </section>
     <script src="menu.js"></script>
