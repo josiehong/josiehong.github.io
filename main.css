@@ -1,3 +1,6 @@
+/* =============================================================
+   BASE TYPOGRAPHY & RESET
+   ============================================================= */
 body {
     margin: 0;
     padding: 0;
@@ -21,11 +24,17 @@ h3 {
     font-size: 13pt;
 }
 
+h3, h4 {
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
+
 a {
     text-decoration: none;
     color: #3560a5;
     transition: color 0.15s, background-color 0.15s;
 }
+
 a:hover {
     color: white;
     background-color: #6490d7;
@@ -39,15 +48,31 @@ highlight {
     color: #3560a5;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin: 1em 0;
+}
+
+footer {
+    margin-top: 3em;
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+    color: #888;
+}
+
+/* =============================================================
+   LAYOUT
+   ============================================================= */
 #content {
-    position: relative; /* Change to relative for responsive positioning */
-    width: 100%; /* Ensure it spans the full width of its container */
-    max-width: 900px; /* Limit maximum width for larger screens */
-    padding: 20px; /* Reduce padding for smaller screens */
-    box-sizing: border-box; /* Include padding in width calculation */
-    margin: 0 auto; /* Center align horizontally */
-    text-align: justify; /* Left and right align text content */
-    line-height: 1.6; /* Adjust line height */
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
 }
 
 #content > *:first-child {
@@ -58,18 +83,215 @@ highlight {
     font-size: 10pt;
 }
 
-/* Media query for smaller screens (e.g., phones) */
 @media (max-width: 900px) {
     html {
-        font-size: 11pt; /* Adjust font size for readability */
+        font-size: 11pt;
     }
     #content {
-        padding: 20px; /* Further reduce padding for smaller screens */
-        max-width: 100%; /* Ensure content spans full width */
+        padding: 20px;
+        max-width: 100%;
     }
 }
 
-/* hero layout */
+/* =============================================================
+   NAVIGATION
+   ============================================================= */
+nav {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    flex-wrap: wrap;
+    font-weight: 500;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    text-align: left;
+}
+
+.navbar a:hover {
+    color: white;
+    background-color: #6490d7;
+}
+
+.navbar a.active {
+    font-weight: 700;
+    color: #3560a5;
+    border-bottom: 3px solid #6490d7;
+    background: none;
+}
+
+/* Hamburger button — hidden by default, shown on mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 600px) {
+    nav {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar a {
+        padding: 16px 20px;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .navbar a {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+/* =============================================================
+   TABLES
+   ============================================================= */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 10pt;
+}
+
+th, td {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th:first-child, td:first-child {
+    padding-left: 0;
+}
+
+th {
+    font-weight: 600;
+    color: black;
+    background: none;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f5f8ff;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 40%;
+        text-align: left;
+    }
+}
+
+/* =============================================================
+   HOME PAGE
+   ============================================================= */
 .hero {
     display: flex;
     align-items: flex-start;
@@ -134,162 +356,6 @@ highlight {
     color: #6490d7;
 }
 
-.sublist {
-    text-align: left;
-    margin: 6pt 0;
-    font-size: 10pt;
-}
-
-.blog-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.blog-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.blog-item:last-child {
-    border-bottom: none;
-}
-
-.blog-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-}
-
-.blog-tag {
-    font-size: 8.5pt;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 3px;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-}
-
-.blog-date {
-    font-size: 9.5pt;
-    color: #888;
-    font-family: 'SFMono-Regular', Consolas, monospace;
-}
-
-.blog-title {
-    font-size: 10pt;
-}
-
-.blog-title a {
-    color: black;
-}
-
-.blog-title a:hover {
-    color: white;
-    background-color: #6490d7;
-}
-
-.blog-tag--study-notes {
-    background-color: #e8eef8;
-    color: #3560a5;
-}
-
-.blog-tag--wild-thoughts {
-    background-color: #e8f4ee;
-    color: #2a7a5a;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #e8e8e8;
-    margin: 1em 0;
-}
-
-footer {
-    margin-top: 3em;
-    border-top: 1px solid #eee;
-    padding-top: 1em;
-    color: #888;
-}
-
-/* Talks list */
-.talk-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.talk-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.talk-item:last-child {
-    border-bottom: none;
-}
-
-.talk-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-}
-
-.talk-type {
-    font-size: 8.5pt;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 3px;
-    white-space: nowrap;
-    letter-spacing: 0.02em;
-}
-
-.talk-type--oral {
-    background-color: #e8eef8;
-    color: #3560a5;
-}
-
-.talk-type--poster {
-    background-color: #f0f0f0;
-    color: #555;
-}
-
-.talk-date {
-    font-size: 9.5pt;
-    color: #888;
-    font-family: 'SFMono-Regular', Consolas, monospace;
-}
-
-.talk-title {
-    font-size: 10pt;
-    margin-bottom: 3px;
-}
-
-.talk-meta {
-    font-size: 9.5pt;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.talk-link {
-    font-size: 9.5pt;
-    color: #3560a5;
-    border: 1px solid #b0c4e8;
-    border-radius: 3px;
-    padding: 1px 6px;
-}
-
-.talk-link:hover {
-    background-color: #6490d7;
-    border-color: #6490d7;
-    color: white;
-}
-
-/* News list */
 .news-list {
     list-style: none;
     padding: 0;
@@ -322,211 +388,56 @@ footer {
     font-size: 10pt;
 }
 
-/* navbar */
-nav {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 24px auto;
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.navbar {
-    display: flex;
-    justify-content: left; 
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    flex-wrap: wrap;
-    font-weight: 500;
-}
-
-.navbar li {
-    margin: 0;
-}
-
-.navbar a {
-    color: black;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
+.sublist {
     text-align: left;
-}
-
-.navbar a:hover {
-    color: white;
-    background-color: #6490d7;
-}
-
-/* active navbar item */
-.navbar a.active {
-    font-weight: 700;
-    color: #3560a5;
-    border-bottom: 3px solid #6490d7;
-    background: none;
-}
-
-/* Hamburger button - hidden by default */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 3px 0;
-    transition: 0.3s;
-    border-radius: 3px;
-}
-
-/* Hamburger animation when active */
-.hamburger.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* Mobile styles */
-@media (max-width: 600px) {
-    nav {
-        margin-bottom: 0;
-        padding: 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .navbar li {
-        width: 100%;
-        border-bottom: 1px solid #eee;
-    }
-
-    .navbar a {
-        padding: 16px 20px;
-        text-align: left;
-        width: 100%;
-    }
-}
-
-/* Tablet optimization */
-@media (min-width: 601px) and (max-width: 768px) {
-    .navbar a {
-        padding: 12px 16px;
-        font-size: 14px;
-    }
-}
-
-
-/* table */
-table {
-    width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    margin: 12px 0;
+    margin: 6pt 0;
     font-size: 10pt;
 }
 
-th, td {
-    border: none;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 8px 12px;
-    text-align: left;
+.research-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-th:first-child, td:first-child {
-    padding-left: 0;
+.research-list li {
+    padding: 10px 0;
 }
 
-th {
+.research-topic {
+    font-size: 10.5pt;
     font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.research-papers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 0;
+    margin-top: 2px;
+    font-size: 10pt;
+}
+
+.research-paper-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.research-venue {
+    font-size: 10pt;
     color: black;
-    background: none;
 }
 
-tbody tr:last-child td {
-    border-bottom: none;
+.research-sublabel {
+    font-size: 10pt;
+    color: black;
 }
 
-tbody tr:hover {
-    background-color: #f5f8ff;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-table {
-    width: 100%; /* Ensure the table takes the full width of its container */
-    border-collapse: collapse;
-}
-
-th, td {
-    display: block; /* Stack table cells vertically */
-    width: 100%; /* Full width of the container */
-    box-sizing: border-box; /* Include padding and border in the width */
-}
-
-thead {
-    display: none; /* Hide the table header */
-}
-
-tbody tr {
-    display: block; /* Stack table rows vertically */
-    margin-bottom: 10px; /* Add spacing between rows */
-}
-
-td::before {
-    content: attr(data-label); /* Use data-label for table headers in small screens */
-    font-weight: bold;
-    display: inline-block;
-    width: 40%; /* Adjust the width as needed */
-    text-align: left;
-}
-}
-
-h3, h4 {
-    margin-top: 24px;
-    margin-bottom: 0px;
-}
-
-
-/* Publication cards */
+/* =============================================================
+   RESEARCH & PUBLICATIONS
+   ============================================================= */
 .paper-card {
     background: #fff;
     padding-top: 12px;
@@ -553,6 +464,7 @@ h3 + p {
     flex-shrink: 0;
     margin-right: 15px;
 }
+
 .toc img {
     width: 300px;
     height: 200px;
@@ -568,12 +480,12 @@ h3 + p {
     border-radius: 3px;
     box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
 }
+
 .content {
     flex-grow: 1;
     padding: 5px;
 }
 
-/* Text-only paper card elements */
 .paper-title {
     font-size: 11pt;
     font-weight: 600;
@@ -625,7 +537,6 @@ h3 + p {
     margin: 0;
 }
 
-/* Responsive adjustments for narrow screens */
 @media (max-width: 900px) {
     .paper-card--image {
         flex-direction: column;
@@ -739,7 +650,155 @@ h3 + p {
     }
 }
 
-/* Professional service list */
+/* =============================================================
+   TALKS
+   ============================================================= */
+.talk-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.talk-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.talk-item:last-child {
+    border-bottom: none;
+}
+
+.talk-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.talk-type {
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+.talk-type--oral {
+    background-color: #e8eef8;
+    color: #3560a5;
+}
+
+.talk-type--poster {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.talk-date {
+    font-size: 9.5pt;
+    color: #888;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.talk-title {
+    font-size: 10pt;
+    margin-bottom: 3px;
+}
+
+.talk-meta {
+    font-size: 9.5pt;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.talk-link {
+    font-size: 9.5pt;
+    color: #3560a5;
+    border: 1px solid #b0c4e8;
+    border-radius: 3px;
+    padding: 1px 6px;
+}
+
+.talk-link:hover {
+    background-color: #6490d7;
+    border-color: #6490d7;
+    color: white;
+}
+
+/* =============================================================
+   BLOGS LISTING
+   ============================================================= */
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.blog-item:last-child {
+    border-bottom: none;
+}
+
+.blog-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.blog-tag {
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.blog-date {
+    font-size: 9.5pt;
+    color: #888;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.blog-title {
+    font-size: 10pt;
+}
+
+.blog-title a {
+    color: black;
+}
+
+.blog-title a:hover {
+    color: white;
+    background-color: #6490d7;
+}
+
+.blog-tag--study-notes {
+    background-color: #e8eef8;
+    color: #3560a5;
+}
+
+.blog-tag--wild-thoughts {
+    background-color: #e8f4ee;
+    color: #2a7a5a;
+}
+
+.blog-tag--paper-reading {
+    background-color: #f5eef8;
+    color: #7d3c98;
+}
+
+/* =============================================================
+   SERVICE & TEACHING
+   ============================================================= */
 .service-list {
     list-style: none;
     padding: 0;

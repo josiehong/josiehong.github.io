@@ -1,4 +1,6 @@
-/* Styling the language switcher button */
+/* =============================================================
+   LANGUAGE SWITCHER
+   ============================================================= */
 .language-toggle {
     display: inline-block;
     padding: 8px 12px;
@@ -26,59 +28,69 @@
     cursor: pointer;
 }
 
-/* Reference */
+/* =============================================================
+   REFERENCES
+   ============================================================= */
 ol.custom-counter {
-    list-style-type: none; /* Remove default numbering */
-    counter-reset: list-counter; /* Reset counter */
+    list-style-type: none;
+    counter-reset: list-counter;
 }
 
 ol.custom-counter li {
-    counter-increment: list-counter; /* Increment counter */
+    counter-increment: list-counter;
 }
 
 ol.custom-counter li::before {
-    content: "[" counter(list-counter) "] "; /* Display counter with brackets */
+    content: "[" counter(list-counter) "] ";
 }
 
-/* CSS for limiting image size in the blog */
+/* =============================================================
+   IMAGES & FIGURES
+   ============================================================= */
 img {
-    max-width: 100%; /* Ensures images do not exceed the width of their container */
-    height: auto;    /* Maintains aspect ratio */
-    display: block;  /* Ensures that images do not have extra space below them */
-    margin: 0 auto;  /* Centers the image in its container */
-}
-figcaption {
-    color: gray; /* Set text color to gray */
-    font-style: italic; /* Optional: Make the text italic */
-    font-size: 9.5pt; /* Optional: Adjust font size */
-    margin-top: 0.5em; /* Optional: Add space above the caption */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* CSS for code blocks */
+figcaption {
+    color: gray;
+    font-style: italic;
+    font-size: 9.5pt;
+    margin-top: 0.5em;
+}
+
+/* =============================================================
+   CODE BLOCKS
+   ============================================================= */
 code {
     border: 1px solid #ddd;
     border-radius: 3px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 0.7em;
 }
+
 pre {
     border: 1px solid #ddd;
     border-radius: 3px;
     padding: 0px 15px;
     overflow-x: auto;
 }
+
 pre code {
     border: none;
     padding: 0;
 }
 
-/* GitHub Gist specific styling */
+/* =============================================================
+   GITHUB GIST EMBEDS
+   ============================================================= */
 .gist-file .blob-num {
     border: none !important;
     background-color: transparent !important;
 }
 
-/* Apply your box styling to the entire gist */
 .gist-file {
     border: 1px solid #ddd !important;
     border-radius: 3px !important;
@@ -89,7 +101,6 @@ pre code {
     border-bottom: none !important;
 }
 
-/* Add margin to the gist container */
 .gist {
-    margin-top: 15px !important; /* Increase this value to add more space */
+    margin-top: 15px !important;
 }
