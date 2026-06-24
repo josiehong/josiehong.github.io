@@ -1,4 +1,18 @@
 /* =============================================================
+   TAG PALETTE — shared across publication / talks / blogs.
+   Tonal set (rose / burgundy / mauve / slate) with staggered
+   lightness for distinguishability; text labels carry meaning.
+   One source of truth: change a color here and it updates everywhere.
+   ============================================================= */
+:root {
+    --tag-burgundy-bg: #f1dfe0;  --tag-burgundy-fg: #7e282e;
+    --tag-rose-bg:     #f4e8e8;  --tag-rose-fg:     #8c4446;
+    --tag-mauve-bg:    #efe9ee;  --tag-mauve-fg:    #6a5566;
+    --tag-slate-bg:    #e8e6ee;  --tag-slate-fg:    #4f4862;
+    --tag-gray-bg:     #f0f0f0;  --tag-gray-fg:     #555555;
+}
+
+/* =============================================================
    BASE TYPOGRAPHY & RESET
    ============================================================= */
 body {
@@ -31,13 +45,13 @@ h3, h4 {
 
 a {
     text-decoration: none;
-    color: #3560a5;
+    color: #7b1e2b;
     transition: color 0.15s, background-color 0.15s;
 }
 
 a:hover {
     color: white;
-    background-color: #6490d7;
+    background-color: #a8475a;
 }
 
 p.lightweight {
@@ -45,7 +59,7 @@ p.lightweight {
 }
 
 highlight {
-    color: #3560a5;
+    color: #7b1e2b;
 }
 
 hr {
@@ -133,13 +147,13 @@ nav {
 
 .navbar a:hover {
     color: white;
-    background-color: #6490d7;
+    background-color: #a8475a;
 }
 
 .navbar a.active {
     font-weight: 700;
-    color: #3560a5;
-    border-bottom: 3px solid #6490d7;
+    color: #7b1e2b;
+    border-bottom: 3px solid #a8475a;
     background: none;
 }
 
@@ -256,7 +270,7 @@ tbody tr:last-child td {
 }
 
 tbody tr:hover {
-    background-color: #f5f8ff;
+    background-color: #fcf6f7;
 }
 
 @media (max-width: 600px) {
@@ -353,7 +367,7 @@ tbody tr:hover {
 }
 
 .icons a:hover {
-    color: #6490d7;
+    color: #a8475a;
 }
 
 .news-list {
@@ -506,7 +520,7 @@ h3 + p {
 }
 
 .paper-venue i {
-    color: #3560a5;
+    color: #7b1e2b;
     font-style: italic;
 }
 
@@ -519,15 +533,15 @@ h3 + p {
 
 .paper-link {
     font-size: 9.5pt;
-    color: #3560a5;
-    border: 1px solid #b0c4e8;
+    color: #7b1e2b;
+    border: 1px solid #e0b8be;
     border-radius: 3px;
     padding: 1px 6px;
 }
 
 .paper-link:hover {
-    background-color: #6490d7;
-    border-color: #6490d7;
+    background-color: #a8475a;
+    border-color: #a8475a;
     color: white;
 }
 
@@ -564,7 +578,7 @@ h3 + p {
     width: 58px;
     flex-shrink: 0;
     font-weight: 600;
-    color: #3560a5;
+    color: #7b1e2b;
     font-size: 10.5pt;
     padding-top: 12px;
     text-align: right;
@@ -598,23 +612,23 @@ h3 + p {
 }
 
 .paper-tag--ml-ms {
-    background-color: #e8eef8;
-    color: #3560a5;
+    background-color: var(--tag-burgundy-bg);
+    color: var(--tag-burgundy-fg);
 }
 
 .paper-tag--survey {
-    background-color: #f0eaf8;
-    color: #6b3fa0;
+    background-color: var(--tag-rose-bg);
+    color: var(--tag-rose-fg);
 }
 
 .paper-tag--patent {
-    background-color: #f0eaf8;
-    color: #6b3fa0;
+    background-color: var(--tag-mauve-bg);
+    color: var(--tag-mauve-fg);
 }
 
 .paper-tag--reliable-ml {
-    background-color: #fdf3e7;
-    color: #b86e00;
+    background-color: var(--tag-slate-bg);
+    color: var(--tag-slate-fg);
 }
 
 .tag-legend {
@@ -685,13 +699,18 @@ h3 + p {
 }
 
 .talk-type--oral {
-    background-color: #e8eef8;
-    color: #3560a5;
+    background-color: var(--tag-burgundy-bg);
+    color: var(--tag-burgundy-fg);
 }
 
 .talk-type--poster {
-    background-color: #f0f0f0;
-    color: #555;
+    background-color: var(--tag-gray-bg);
+    color: var(--tag-gray-fg);
+}
+
+.talk-type--invited {
+    background-color: var(--tag-rose-bg);
+    color: var(--tag-rose-fg);
 }
 
 .talk-date {
@@ -716,15 +735,15 @@ h3 + p {
 
 .talk-link {
     font-size: 9.5pt;
-    color: #3560a5;
-    border: 1px solid #b0c4e8;
+    color: #7b1e2b;
+    border: 1px solid #e0b8be;
     border-radius: 3px;
     padding: 1px 6px;
 }
 
 .talk-link:hover {
-    background-color: #6490d7;
-    border-color: #6490d7;
+    background-color: #a8475a;
+    border-color: #a8475a;
     color: white;
 }
 
@@ -778,27 +797,27 @@ h3 + p {
 
 .blog-title a:hover {
     color: white;
-    background-color: #6490d7;
+    background-color: #a8475a;
 }
 
 .blog-tag--study-notes {
-    background-color: #e8eef8;
-    color: #3560a5;
+    background-color: var(--tag-burgundy-bg);
+    color: var(--tag-burgundy-fg);
 }
 
 .blog-tag--wild-thoughts {
-    background-color: #e8f4ee;
-    color: #2a7a5a;
+    background-color: var(--tag-slate-bg);
+    color: var(--tag-slate-fg);
 }
 
 .blog-tag--paper-reading {
-    background-color: #f5eef8;
-    color: #7d3c98;
+    background-color: var(--tag-mauve-bg);
+    color: var(--tag-mauve-fg);
 }
 
 .blog-tag--project {
-    background-color: #fef3e2;
-    color: #b45309;
+    background-color: var(--tag-rose-bg);
+    color: var(--tag-rose-fg);
 }
 
 /* =============================================================
