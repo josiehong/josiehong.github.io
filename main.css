@@ -639,6 +639,14 @@ h3 + p {
     margin: 1em 0;
 }
 
+.scholar-note {
+    font-size: 9.5pt;
+    color: #666;
+    font-style: italic;
+    margin-top: -2px;
+    margin-bottom: 22px;
+}
+
 .tag-legend-label {
     font-size: 9.5pt;
     color: #888;
