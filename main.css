@@ -424,6 +424,12 @@ tbody tr:hover {
     margin-bottom: 6px;
 }
 
+.research-desc {
+    font-size: 10pt;
+    color: #444;
+    margin-bottom: 6px;
+}
+
 .research-papers {
     display: flex;
     flex-wrap: wrap;

@@ -89,9 +89,9 @@
     <!-- Intro -->
     <p>
       I am a postdoctoral researcher working at the intersection of machine learning and molecular science.
-      My research focuses on developing computational methods to model and interpret high-throughput experimental data,
-      particularly mass spectrometry-based proteomics and metabolomics.
-      I am interested in building machine learning systems that enable deeper understanding of molecular mechanisms
+      My research focuses on developing interpretable and trustworthy machine learning methods to model and interpret
+      high-throughput biological data, with an emphasis on mass spectrometry-based proteomics and metabolomics.
+      Across these efforts, I aim to build systems that reveal underlying molecular mechanisms
       and accelerate biological and chemical discovery.
     </p>
     <p>
@@ -122,35 +122,18 @@
     <h2>Research interests</h2>
     <ul class="research-list">
       <li>
-        <div class="research-topic">De novo molecular identification from mass spectra</div>
-        <div class="research-papers">
-          <span class="research-sublabel">Metabolomics:</span>&thinsp;
-          <span class="research-paper-item">
-            <span class="research-venue">FIDDLE</span>
-            <a href="https://www.nature.com/articles/s41467-025-66060-9" target="_blank">(Nature Communications,
-              2025)</a>
-          </span>
-        </div>
-        <div class="research-papers">
-          <span class="research-sublabel">Proteomics:</span>&thinsp;
-          <span class="research-venue">De novo peptide sequencing (in progress, Noble Lab)</span>
-        </div>
-        <div class="research-papers">
-          <span class="research-sublabel">Review:</span>&thinsp;
-          <span class="research-paper-item">
-            <span class="research-venue">Machine learning in small-molecule mass spectrometry</span>
-            <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-anchem-071224-082157" target="_blank">(Annual Review of Analytical Chemistry, 2025)</a>
-          </span>
-        </div>
-      </li>
-
-      <li>
-        <div class="research-topic">3D molecular representation and properties prediction</div>
+        <div class="research-topic">3D molecular representation and property prediction</div>
+        <div class="research-desc">The forward problem, going from molecule to measurement: 3D-aware molecular
+          representations that predict how structure gives rise to spectra and physicochemical properties such as
+          fragmentation, retention time, and chiral separation, building in-silico libraries that extend database
+          search to compounds never measured and illuminate the dark regions of chemical space.</div>
         <div class="research-papers">
           <span class="research-paper-item">
             <span class="research-venue">3DMolMS</span>
-            <a href="https://academic.oup.com/bioinformatics/article/39/6/btad354/7186501"
-              target="_blank">(Bioinformatics, 2023)</a>
+            <span>(<a href="https://academic.oup.com/bioinformatics/article/39/6/btad354/7186501"
+                target="_blank">Bioinformatics, 2023</a>; <a
+                href="https://www.nature.com/articles/s41467-025-64870-5" target="_blank">Nature Communications,
+                2025</a>)</span>
           </span>&thinsp;·&thinsp;
           <span class="research-paper-item">
             <span class="research-venue">3DMolCSP</span>
@@ -162,9 +145,33 @@
           </span>
         </div>
       </li>
-      
+
       <li>
-        <div class="research-topic">Trustworthy machine learning for microbiome-based disease prediction</div>
+        <div class="research-topic">Reference-free molecular identification from mass spectra</div>
+        <div class="research-desc">The inverse problem of mass spectrometry, going from measurement back to molecule:
+          machine learning methods that infer the structure of unknown peptides and small molecules directly from their
+          spectra, discovering molecules beyond the reach of reference libraries.</div>
+        <div class="research-papers">
+          <span class="research-paper-item">
+            <span class="research-venue">FIDDLE</span>
+            <a href="https://www.nature.com/articles/s41467-025-66060-9" target="_blank">(Nature Communications,
+              2025)</a>
+          </span>&thinsp;·&thinsp;
+          <span class="research-paper-item">
+            <span class="research-venue">De novo peptide sequencing (in progress, Noble Lab)</span>
+          </span>&thinsp;·&thinsp;
+          <span class="research-paper-item">
+            <span class="research-venue">Machine learning in small-molecule mass spectrometry</span>
+            <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-anchem-071224-082157" target="_blank">(Annual Review of Analytical Chemistry, 2025)</a>
+          </span>
+        </div>
+      </li>
+
+      <li>
+        <div class="research-topic">Trustworthy and interpretable machine learning for science</div>
+        <div class="research-desc">Building biologically informed models whose reasoning is interpretable and robust to
+          confounders, enabling reliable biomarker discovery and trustworthy clinical decisions, with current
+          applications in microbiome-based disease prediction.</div>
         <div class="research-papers">
           <span class="research-paper-item"><span class="research-venue">MicroKPNN-MT</span><a
               href="https://academic.oup.com/bioinformaticsadvances/article/5/1/vbae203/7923434"
