@@ -88,11 +88,18 @@
 
     <!-- Intro -->
     <p>
-      I am a postdoctoral researcher working at the intersection of machine learning and molecular science.
-      My research focuses on developing interpretable and trustworthy machine learning methods to model and interpret
-      high-throughput biological data, with an emphasis on mass spectrometry-based proteomics and metabolomics.
-      Across these efforts, I aim to build systems that reveal underlying molecular mechanisms
-      and accelerate biological and chemical discovery.
+      I am a postdoctoral researcher at the University of Washington, working at the 
+      intersection of machine learning and molecular science. I'm fascinated by a 
+      simple but stubborn problem: molecules leave signals (a spectrum, a retention 
+      time, a fragmentation pattern), but reading those signals back into structure 
+      is often messy, ambiguous, and short on labeled data. My research builds machine 
+      learning that takes this seriously: models grounded in the physical and chemical 
+      structure of the problem, not just the data, and honest about how much a 
+      prediction can be trusted. Most of this work lives in mass spectrometry-based 
+      proteomics and metabolomics, where it's helped uncover molecules, including 
+      drug metabolites, that no reference library had seen before. Looking ahead, 
+      I want to push this same thinking into higher-stakes territory: discovering and 
+      designing the molecules that matter for human health.
     </p>
     <p>
       Please feel free to get in touch!
@@ -122,11 +129,12 @@
     <h2>Research interests</h2>
     <ul class="research-list">
       <li>
-        <div class="research-topic">3D molecular representation and property prediction</div>
-        <div class="research-desc">The forward problem, going from molecule to measurement: 3D-aware molecular
-          representations that predict how structure gives rise to spectra and physicochemical properties such as
-          fragmentation, retention time, and chiral separation, building in-silico libraries that extend database
-          search to compounds never measured and illuminate the dark regions of chemical space.</div>
+        <div class="research-topic">Forward: structure to measurement</div>
+        <div class="research-desc">Predicting how molecular structure gives rise to measurable signal: 3D-aware 
+          representations that predict spectra and physicochemical properties such as 
+          fragmentation, retention time, and chiral separation, building in-silico libraries 
+          that extend database search to compounds never measured and illuminate the "dark 
+          matters" of chemical space.</div>
         <div class="research-papers">
           <span class="research-paper-item">
             <span class="research-venue">3DMolMS</span>
@@ -147,10 +155,11 @@
       </li>
 
       <li>
-        <div class="research-topic">Reference-free molecular identification from mass spectra</div>
-        <div class="research-desc">The inverse problem of mass spectrometry, going from measurement back to molecule:
-          machine learning methods that infer the structure of unknown peptides and small molecules directly from their
-          spectra, discovering molecules beyond the reach of reference libraries.</div>
+        <div class="research-topic">Inverse: measurement back to structure</div>
+        <div class="research-desc">Recovering molecular and peptide structure directly from spectra without a 
+          reference library: machine learning methods for small-molecule identification 
+          and de novo peptide sequencing, extending identification beyond the reach of 
+          spectral databases.</div>
         <div class="research-papers">
           <span class="research-paper-item">
             <span class="research-venue">FIDDLE</span>
@@ -168,17 +177,22 @@
       </li>
 
       <li>
-        <div class="research-topic">Trustworthy and interpretable machine learning for science</div>
-        <div class="research-desc">Building biologically informed models whose reasoning is interpretable and robust to
-          confounders, enabling reliable biomarker discovery and trustworthy clinical decisions, with current
-          applications in microbiome-based disease prediction.</div>
+        <div class="research-topic">Trustworthy inference: knowing when to believe the answer</div>
+        <div class="research-desc">Ensuring that inferences are not just accurate but statistically and mechanistically 
+          accountable: controlling false discovery rates in molecule and peptide 
+          identification, and building interpretable models robust to confounders for 
+          reliable biomarker discovery and clinical decision-making.</div>
         <div class="research-papers">
           <span class="research-paper-item"><span class="research-venue">MicroKPNN-MT</span><a
               href="https://academic.oup.com/bioinformaticsadvances/article/5/1/vbae203/7923434"
               target="_blank">(Bioinformatics Advances, 2024)</a></span>&thinsp;·&thinsp;<span
             class="research-paper-item"><span class="research-venue">MicroKPNN-CF</span><a
               href="https://www.biorxiv.org/content/10.1101/2025.01.29.635502v1.abstract" target="_blank">(bioRxiv,
-              2025)</a></span>
+              2025)</a>
+          </span>&thinsp;·&thinsp;
+          <span class="research-paper-item">
+            <span class="research-venue">False discovery rate control for de novo identification (in progress, Noble Lab)</span>
+          </span>
         </div>
       </li>
     </ul>
