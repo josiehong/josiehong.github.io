@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- burgundy fish, facing left -->
-  <g fill="#7b1e2b">
+  <defs>
+    <clipPath id="body"><ellipse cx="27" cy="32" rx="19" ry="11"/></clipPath>
+  </defs>
+  <!-- blue fish, facing left — matches the site accent -->
+  <g fill="#1f5fd6">
     <!-- tail -->
     <path d="M42 32 L61 21 Q57 32 61 43 Z"/>
     <!-- body -->
     <ellipse cx="27" cy="32" rx="19" ry="11"/>
     <!-- top fin -->
     <path d="M22 21 Q30 14 37 22 Z"/>
+  </g>
+  <!-- two yellow stripes, clipped to the body -->
+  <g clip-path="url(#body)" fill="#ffd23f">
+    <rect x="21" y="18" width="4" height="28"/>
+    <rect x="31" y="18" width="4" height="28"/>
   </g>
   <!-- eye -->
   <circle cx="15" cy="29" r="2.6" fill="#ffffff"/>
