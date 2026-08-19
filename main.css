@@ -38,7 +38,7 @@ body {
 
 html {
     font-family: 'Inter', sans-serif;
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: 300;
 }
 
@@ -47,11 +47,11 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-    font-size: 16pt;
+    font-size: 17pt;
 }
 
 h3 {
-    font-size: 13pt;
+    font-size: 14pt;
 }
 
 h3, h4 {
@@ -128,12 +128,12 @@ footer p {
 }
 
 #content p {
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 @media (max-width: 900px) {
     html {
-        font-size: 11pt;
+        font-size: 12pt;
     }
     #content {
         padding: 20px;
@@ -279,7 +279,7 @@ table {
     max-width: 800px;
     border-collapse: collapse;
     margin: 12px 0;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 th, td {
@@ -356,7 +356,7 @@ tbody tr:hover {
 }
 
 .hero-text p {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
 }
 
 .avatar {
@@ -424,7 +424,7 @@ tbody tr:hover {
 
 .news-date {
     font-family: 'SFMono-Regular', Consolas, monospace;
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #888;
     white-space: nowrap;
     padding-top: 2px;
@@ -433,13 +433,13 @@ tbody tr:hover {
 
 .news-content {
     flex: 1;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .sublist {
     text-align: left;
     margin: 6pt 0;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .research-list {
@@ -453,13 +453,13 @@ tbody tr:hover {
 }
 
 .research-topic {
-    font-size: 10.5pt;
+    font-size: 11.5pt;
     font-weight: 600;
     margin-bottom: 6px;
 }
 
 .research-desc {
-    font-size: 10pt;
+    font-size: 11pt;
     color: #444;
     margin-bottom: 6px;
 }
@@ -470,7 +470,7 @@ tbody tr:hover {
     align-items: center;
     gap: 4px 0;
     margin-top: 2px;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .research-paper-item {
@@ -480,12 +480,12 @@ tbody tr:hover {
 }
 
 .research-venue {
-    font-size: 10pt;
+    font-size: 11pt;
     color: black;
 }
 
 .research-sublabel {
-    font-size: 10pt;
+    font-size: 11pt;
     color: black;
 }
 
@@ -541,20 +541,20 @@ h3 + p {
 }
 
 .paper-title {
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: 600;
     margin: 0 0 3px 0;
     line-height: 1.4;
 }
 
 .paper-authors {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #444;
     margin: 0 0 2px 0;
 }
 
 .paper-venue {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #555;
     margin: 0 0 6px 0;
 }
@@ -572,7 +572,7 @@ h3 + p {
 }
 
 .paper-link {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: var(--blue);
     border: 1px solid var(--line);
     border-radius: 3px;
@@ -586,7 +586,7 @@ h3 + p {
 }
 
 .tldr {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #555;
     margin: 0;
 }
@@ -619,7 +619,7 @@ h3 + p {
     flex-shrink: 0;
     font-weight: 600;
     color: var(--graphite);
-    font-size: 10.5pt;
+    font-size: 11.5pt;
     padding-top: 12px;
     text-align: right;
 }
@@ -643,7 +643,7 @@ h3 + p {
 .selected-pubs .paper-title {
     display: block;
     font-weight: 400;
-    font-size: 10.5pt;
+    font-size: 11.5pt;
     color: #1a1a1a;
     margin: 0 0 2px 0;
 }
@@ -674,7 +674,7 @@ h3 + p {
 }
 
 .paper-tag {
-    font-size: 8.5pt;
+    font-size: 9pt;
     font-weight: 600;
     padding: 1px 7px;
     border-radius: 3px;
@@ -711,7 +711,7 @@ h3 + p {
 }
 
 .scholar-note {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #666;
     font-style: italic;
     margin-top: -2px;
@@ -719,7 +719,7 @@ h3 + p {
 }
 
 .tag-legend-label {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #888;
 }
 
@@ -769,7 +769,7 @@ h3 + p {
 }
 
 .talk-type {
-    font-size: 8.5pt;
+    font-size: 9pt;
     font-weight: 600;
     padding: 2px 7px;
     border-radius: 3px;
@@ -793,18 +793,18 @@ h3 + p {
 }
 
 .talk-date {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #888;
     font-family: 'SFMono-Regular', Consolas, monospace;
 }
 
 .talk-title {
-    font-size: 10pt;
+    font-size: 11pt;
     margin-bottom: 3px;
 }
 
 .talk-meta {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #555;
     display: flex;
     align-items: center;
@@ -813,7 +813,7 @@ h3 + p {
 }
 
 .talk-link {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: var(--blue);
     border: 1px solid var(--line);
     border-radius: 3px;
@@ -852,7 +852,7 @@ h3 + p {
 }
 
 .blog-tag {
-    font-size: 8.5pt;
+    font-size: 9pt;
     font-weight: 600;
     padding: 2px 7px;
     border-radius: 3px;
@@ -861,13 +861,13 @@ h3 + p {
 }
 
 .blog-date {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #888;
     font-family: 'SFMono-Regular', Consolas, monospace;
 }
 
 .blog-title {
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .blog-title a {
@@ -922,7 +922,7 @@ h3 + p {
 }
 
 .service-label {
-    font-size: 10pt;
+    font-size: 11pt;
     font-weight: 600;
     color: black;
     white-space: nowrap;
@@ -931,11 +931,11 @@ h3 + p {
 
 .service-content {
     flex: 1;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .service-note {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #888;
     font-style: italic;
     margin-top: 4px;
