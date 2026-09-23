@@ -926,7 +926,7 @@ h3 + p {
     font-weight: 600;
     color: black;
     white-space: nowrap;
-    min-width: 100px;
+    min-width: 112px;
 }
 
 .service-content {
@@ -939,4 +939,36 @@ h3 + p {
     color: #888;
     font-style: italic;
     margin-top: 4px;
+}
+
+/* =============================================================
+   Teaching and mentoring lists
+   ============================================================= */
+.entry-title {
+    font-size: 11pt;
+    margin-bottom: 2px;
+}
+
+.entry-meta {
+    font-size: 10.5pt;
+    color: #555;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.entry-note {
+    font-size: 10.5pt;
+    color: #888;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.entry-note .talk-link {
+    font-style: normal;
 }
