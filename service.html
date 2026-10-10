@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yuhui Hong — Service</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="talks.html">Talks</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="service.html" class="active">Service</a></li>
+            <li><a href="./files/cv-yuhui-hong.pdf" target="_blank">CV</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <h2>Service</h2>
+
+        <h3>Reviewer</h3>
+        <ul class="service-list">
+            <li class="service-item">
+                <span class="service-label">Conference</span>
+                <span class="service-content">KDD (2026, 2027), ACM BCB (2026, 2025), EMBC (2026), NeurIPS AI for Drug Discovery Workshop (2026)</span>
+            </li>
+            <li class="service-item">
+                <span class="service-label">Journal</span>
+                <span class="service-content">ACS Measurement Science Au, Journal of Chemical Information and Modeling, Journal of Chromatography A, BMC Genomics, BMC Bioinformatics, IEEE Transactions on Computational Biology and Bioinformatics, Pharmaceutical Research, Beilstein Journal of Organic Chemistry, Chemical Physics Letters, PeerJ Computer Science</span>
+            </li>
+        </ul>
+
+        <h3>Sub-reviewer</h3>
+        <p class="service-note">Assisted in reviewing papers under the guidance of Professor William Noble and Professor Haixu Tang.</p>
+
+        <ul class="service-list">
+            <li class="service-item">
+                <span class="service-label">Conference</span>
+                <span class="service-content">ICLR (2027), RECOMB (2026, 2025, 2023, 2022), ISMB/ECCB (2025, 2023), ACM BCB (2024)</span>
+            </li>
+            <li class="service-item">
+                <span class="service-label">Journal</span>
+                <span class="service-content">
+                    Analytical Chemistry, International Journal of Mass Spectrometry
+                </span>
+            </li>
+        </ul>
+
+        <footer>
+          <img src="favicon.svg" alt="" class="footer-mark" />
+          <p>&copy; <span id="year"></span> Yuhui Hong. All rights reserved.</p>
+        </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </section>
+    <script src="menu.js"></script>
+</body>
+</html>
